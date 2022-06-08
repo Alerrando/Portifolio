@@ -272,6 +272,28 @@ section{
     width: 100%;
 }
 
+.card-info .h2{
+    color: #F2EBE9;
+    font-size: 0.9em;
+}
+
+.card-info span{
+    color: #20b2aa;
+}
+
+.card-info .h2{
+    color: #F2EBE9;
+}
+
+.card-info p{
+    color: #cc7000;
+    font-size: 0.85em;
+}
+
+.container-projetos ~ .container-projetos .card-container:nth-child(1) .h2{
+    color: #ff4040;
+}
+
 @media screen and (min-width: 47.75em) {
     .card-container{
         width: 25em;
@@ -288,16 +310,10 @@ section{
     }
     
     .card-info .h2{
-        color: #F2EBE9;
         font-size: 1.2em;
     }
     
-    .card-info span{
-        color: #20b2aa;
-    }
-    
     .card-info p{
-        color: #cc7000;
         font-weight: bold;
     }
     
