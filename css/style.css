@@ -248,10 +248,6 @@ section {
   display: block;
 }
 
-.card-img {
-  height: 100%;
-}
-
 .card-container {
   height: 13em;
   margin: 2em auto;
@@ -259,7 +255,7 @@ section {
   width: 21em;
 }
 
-.card-img a img,
+.card-img img,
 .sobre-img img,
 .linguagens-img img {
   height: 100%;
@@ -267,13 +263,39 @@ section {
   width: 100%;
 }
 
-.card-info {
-  bottom: 0;
-  padding: 2em;
-  position: absolute;
+.card-icones{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+}
+
+.icone{
+  align-items: center;
+  background-color: #222;
+  border: 2px solid #000;
+  border-radius: 999999px;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+.icone i{
+  color: white;
+  font-size: 1.3em;
+}
+
+.card-info, .card-icones{
   text-align: center;
   transition: all 0.8s;
   width: 100%;
+}
+
+.card-info{
+  bottom: 2em;
+  padding: 2em;
+  position: absolute;
 }
 
 .card-info .h2 {
@@ -285,16 +307,12 @@ section {
   color: #20b2aa;
 }
 
-.card-info .h2 {
-  color: #f2ebe9;
-}
-
 .card-info p {
   color: #cc7000;
   font-size: 0.85em;
 }
 
-.container-projetos ~ .container-projetos .card-container:nth-child(1) .h2 {
+.container-projetos:last-child .card-container:nth-child(1) .h2, .card-container:nth-child(3) .h2 {
   color: #ff4040;
 }
 
@@ -308,7 +326,16 @@ section {
     justify-content: space-evenly;
   }
 
-  .card-info {
+  .card-icones{
+    bottom: 6em;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    position: absolute;
+    gap: 4em;
+  }
+
+  .card-info, .card, .card-icones{
     opacity: 0;
     visibility: hidden;
   }
@@ -321,8 +348,7 @@ section {
     font-weight: bold;
   }
 
-  .card-container:hover .card-info {
-    bottom: 1em;
+  .card-container:hover .card-info, .card-container:hover .card-icones {
     opacity: 1;
     visibility: visible;
   }
